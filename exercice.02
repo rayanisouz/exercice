@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS | 00</title>
+
+<!--Color page(css)-->
+    <style>
+        body{
+            background-color:violet;
+            font-family: 'Courier New', Courier,monospace;
+            text-align: center;
+        }
+        .box-nav{
+            background-color:aliceblue;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0 ,0, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15%;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 10px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: salmon;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO</h1>
+        <h2>Para práticar</h2>
+    </div>
+    <div class="box nav">
+        <p>Leia valores A e B. Trocar os valores entre as duas variáveis A passa a possuir o valor da variável B e a variável B passa a possuir o valor da variável A.</p>
+        <input type="text" id="num-a" placeholder="Digite um valor A">
+        <br><br>
+        <input type="text" id="num-b" placeholder="Digite um valor B">
+        <br><br>
+        <button onclick="go()">Enviar</button>
+    </div>
+</body>
+<script>
+    function go()
+    {
+        var a = document.getElementById('num-a').value;
+        var b = document.getElementById('num-b').value;
+        console.log('Variável A: ' + a);
+        console.log('Variável B: ' + b);
+        var c = b;
+        var b = a;
+        var a = c;
+        console.log('Variável A: ' + a);
+        console.log('Variável B: ' + b);
+    }
+</script>
+</html>
